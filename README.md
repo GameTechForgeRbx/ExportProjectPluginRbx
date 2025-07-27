@@ -14,8 +14,7 @@ A Roblox Studio plugin and companion Python tool to help you export and process 
   - [Python File Setup](#python-file-setup)
 - [Usage](#usage)
   - [When to Use the Plugin](#when-to-use-the-plugin)
-  - [How to Use the Plugin](#how-to-use-the-plugin)
-  - [How to Use the Python Tool](#how-to-use-the-python-tool)
+  - [How to Use the Plugin and Python Tool](#how-to-use-the-plugin-and-python-tool)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
 
@@ -23,7 +22,7 @@ A Roblox Studio plugin and companion Python tool to help you export and process 
 
 ## Overview
 
-**ExportProjectPluginRbx** is a Roblox Studio plugin designed to simplify the process of exporting the Structure of a Roblox-Game. It includes a Python script to further process or automate exported data for integration with external tools or pipelines.
+**ExportProjectPluginRbx** is a Roblox Studio plugin designed to simplify the process of exporting Roblox places, models, or assets. It includes a Python script to further process or automate exported data for integration with external tools or pipelines.
 
 ---
 
@@ -64,7 +63,7 @@ A Roblox Studio plugin and companion Python tool to help you export and process 
 ### Python File Setup
 
 1. **Download the Python Script:**
-   - Find the Python file (e.g., `export_processor.py`) in this repository.
+   - Find the Python file (e.g., `Plugin.py` or `export_processor.py`) in this repository.
 
 2. **Install Python (if not installed):**
    - Download from [python.org](https://www.python.org/downloads/).
@@ -87,33 +86,30 @@ A Roblox Studio plugin and companion Python tool to help you export and process 
 - When you want to export assets, places, or models from your Roblox project for backup, sharing, or further processing.
 - When you need to automate export tasks as part of a build pipeline using the provided Python tool.
 
-### How to Use the Plugin
+### How to Use the Plugin and Python Tool
 
-1. **Open Your Project in Roblox Studio.**
-2. **Use the Plugin:**
+1. **Start the Python Tool First:**
+   - In your terminal or command prompt, navigate to the directory containing `Plugin.py`.
+   - Run the script:
+     ```bash
+     python Plugin.py
+     ```
+   - Keep this script running; it will wait for export requests from Roblox Studio.
+
+2. **Open Your Project in Roblox Studio.**
+
+3. **Use the Plugin:**
    - Go to the **Plugins** tab.
    - Click on **ExportProjectPluginRbx**.
    - Follow the plugin's UI prompts to select what you want to export (e.g., place, models, assets).
    - Specify the export destination if prompted.
-   - Click **Export**.
-3. **Exported Files:**
-   - The exported file(s) will be saved to your chosen directory, typically as `.rbxl`, `.rbxm`, or other supported formats.
 
-### How to Use the Python Tool
+4. **Export:**
+   - Click the **Export** button in the plugin UI.
+   - The plugin will communicate with the running Python script to handle the export and any post-processing.
 
-1. **Locate the Exported Files:**
-   - Use the files exported by the plugin as input for the Python script.
-
-2. **Run the Python Script:**
-   - In terminal/command prompt, navigate to the script’s directory.
-   - Run the script, specifying the exported file:
-     ```bash
-     python export_processor.py path/to/exported_file.rbxl
-     ```
-   - (Optional) Add additional arguments as supported by the script for custom processing.
-
-3. **Processed Output:**
-   - The script will process the export, perform any conversions, or trigger automations as defined.
+5. **Check Output:**
+   - The exported files will be saved at your designated location, and any additional processing handled by the Python script will be completed.
 
 ---
 
@@ -129,6 +125,7 @@ A Roblox Studio plugin and companion Python tool to help you export and process 
 
 - **File not exporting/processing correctly?**
   - Double-check file paths.
+  - Ensure the Python script (`Plugin.py`) is running before clicking export in Studio.
   - Review plugin and script logs or error messages.
 
 ---
