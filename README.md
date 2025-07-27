@@ -23,7 +23,7 @@ A Roblox Studio plugin and companion Python tool to help you export and process 
 
 ## Overview
 
-**ExportProjectPluginRbx** is a Roblox Studio plugin designed to simplify the process of exporting Roblox places, models, or assets. It includes a Python script to further process or automate exported data for integration with external tools or pipelines.
+**ExportProjectPluginRbx** is a Roblox Studio plugin designed to simplify the process of exporting the Structure of a Roblox-Game. It includes a Python script to further process or automate exported data for integration with external tools or pipelines.
 
 ---
 
